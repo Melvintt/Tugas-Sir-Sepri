@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Barang ATK</title>
+</head>
+<body>
+    <h1>Edit Barang ATK</h1>
+    <form method="POST">
+        <label for="nama_barang">Nama Barang:</label>
+        <input type="text" name="nama_barang" value="{{ barang.nama_barang }}" required><br><br>
+        <label for="kategori">Kategori:</label>
+        <input type="text" name="kategori" value="{{ barang.kategori }}"><br><br>
+        <label for="harga">Harga:</label>
+        <input type="number" name="harga" value="{{ barang.harga }}" step="10.000"><br><br>
+        <label for="stok">Stok:</label>
+        <input type="number" name="stok" value="{{ barang.stok }}"><br><br>
+        <button type="submit">Update</button>
+    </form>
+    <a href="{{ url_for('index') }}">Kembali ke Daftar Barang</a>
+</body>
+</html>
